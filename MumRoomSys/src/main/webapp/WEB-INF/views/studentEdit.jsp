@@ -35,6 +35,8 @@
 				<div class="form-group col-md-6">
 					<label for="username">Login</label> 
 					<form:input disabled="true" type="text" path="username" id="username" class="form-control" />
+					<form:hidden path="username" class="form-control" />
+					<form:hidden path="email" class="form-control" />					
 				</div>		
 				<div class="form-group col-md-6">
 					<label for="password">Password</label> 
