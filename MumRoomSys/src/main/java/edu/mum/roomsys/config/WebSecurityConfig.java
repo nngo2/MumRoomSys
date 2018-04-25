@@ -38,7 +38,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.loginPage("/loginpage").failureUrl("/loginfailed").permitAll()
 				.defaultSuccessUrl("/index", true)
 				.loginProcessingUrl("/j_spring_security_check").and()
-			.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/index").permitAll();
+			.logout().deleteCookies("JSESSIONID")
+			.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+			.logoutSuccessUrl("/index").permitAll();
 		
 		http.csrf()
 			.ignoringAntMatchers("/api/**");
