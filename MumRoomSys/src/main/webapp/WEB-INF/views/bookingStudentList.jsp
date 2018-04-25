@@ -54,7 +54,7 @@
 		</c:if>
 		<c:if test="${students.hasContent()}">
 			<tr>
-				<td colspan="4">Pages: 	
+				<td colspan="5">Pages: 	
 					<c:forEach var="no" begin="0" end="${page.getTotalPage() - 1}">
 						<a href="/bookings/students/${no}?criteria=${searchCriteria.criteria}&searchBy=${searchCriteria.searchBy}">${no + 1} </a>
 					</c:forEach>
